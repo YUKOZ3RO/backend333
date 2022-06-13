@@ -1,12 +1,14 @@
+using backend333.RequestModel.cs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend333.Controllers;
-
+[ApiController]
+[Route("[controller]")]
 public class CommunityController : Controller
-{
-    // GET
-    public IActionResult Index()
+{[HttpPost()]
+    
+    public ActionResult<Community> CommunityInput([FromBody] Community community)
     {
-        return View();
+        return Ok(community);
     }
 }
