@@ -1,14 +1,14 @@
+using backend333.Controllers.RequestModel.cs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend333.Controllers;
 [ApiController]
-[Route("[Controller]")]
-public class ContactUsController : ControllerBase
+[Route("[controller]")]
+public  class ContactUsController : ControllerBase
 {
-    // GET
-    [HttpGet()]
-    public IActionResult Index()
-    {
-        return Ok();
+    [HttpPost()]
+     public ActionResult<ContactUs> ContactUsInput([FromBody] ContactUs contactUs)
+     {
+        return Ok(contactUs);
     }
 }
