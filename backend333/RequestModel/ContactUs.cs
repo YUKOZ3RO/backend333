@@ -1,11 +1,11 @@
 using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Mvc;
 
-namespace backend333.Controllers.RequestModel.cs;
+namespace backend333.RequestModel;
 
-public class ContactUs
-{[Required]
-    public string FirstName { get; set; }
+public class ContactUs {
+[Key] public int Id{ get; set; }
+
+public string FirstName { get; set; }
     [Required]
     public string LastName{get; set; }
     [EmailAddress(ErrorMessage = "must be specified")]
