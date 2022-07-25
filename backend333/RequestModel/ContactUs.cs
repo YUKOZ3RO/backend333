@@ -3,7 +3,12 @@ using System.ComponentModel.DataAnnotations;
 namespace backend333.RequestModel;
 
 public class ContactUs {
-[Key] public int Id{ get; set; }
+    public ContactUs(string firstName)
+    {
+        FirstName = firstName;
+    }
+
+    [Key] public int Id{ get; set; }
 
 public string FirstName { get; set; }
     [Required]

@@ -107,7 +107,11 @@ public class WeatherForecastController : ControllerBase
         }
 
         return NotFound();
+        return NewMethod(boolean);
+    }
 
+    private static ActionResult<bool> NewMethod(bool boolean)
+    {
         return boolean;
     }
 
